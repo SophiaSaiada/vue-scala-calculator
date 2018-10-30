@@ -1,6 +1,5 @@
 module.exports = {
   lintOnSave: false,
-  baseUrl: "vue-scala-calculator/docs/",
+  baseUrl: "vue-scala-calculator/",
   outputDir: "docs",
-  runtimeCompiler: true,
 };
