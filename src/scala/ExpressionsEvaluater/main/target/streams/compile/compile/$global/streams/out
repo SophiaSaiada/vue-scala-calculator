@@ -1,0 +1,13 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\User\IdeaProjects\ExpressionsEvaluater\main\src\main\scala\main.scala:180:33: not enough arguments for method apply: (operation: Operation.Value, isReference: Boolean, value: Double, insideBrackets: Boolean)IdentityExpression in object IdentityExpression.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter insideBrackets.[0m
+[0m[[0m[31merror[0m] [0m[0m              IdentityExpression(isReference = true, value = s.substring(1).toDouble)[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\User\IdeaProjects\ExpressionsEvaluater\main\src\main\scala\main.scala:182:33: not enough arguments for method apply: (operation: Operation.Value, isReference: Boolean, value: Double, insideBrackets: Boolean)IdentityExpression in object IdentityExpression.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter insideBrackets.[0m
+[0m[[0m[31merror[0m] [0m[0m              IdentityExpression(isReference = false, value = s.toDouble)[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\User\IdeaProjects\ExpressionsEvaluater\main\src\main\scala\main.scala:184:31: not enough arguments for method apply: (operation: Operation.Value, isReference: Boolean, value: Double, insideBrackets: Boolean)IdentityExpression in object IdentityExpression.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter insideBrackets.[0m
+[0m[[0m[31merror[0m] [0m[0m            IdentityExpression(isReference = false, value = constants(s))[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m

@@ -1,0 +1,130 @@
+.calculator-view
+  width: $button-height * 5
+  min-height: $button-height * 7
+
+  display: grid
+  grid-template-columns: 3fr 2fr
+  grid-template-rows: 1fr $button-height 3*$button-height
+
+  box-shadow: 0rem 0.4rem 2.4rem 0 rgba(0, 0, 0, .1), 0.4rem 1rem 2.4rem 0 rgba(0, 0, 0, .05), -0.4rem 1rem 2.4rem 0 rgba(0, 0, 0, .05)
+  border-radius: .25rem
+  overflow: hidden
+
+  background: #fff
+
+.result
+  grid-column: 1 / 2 span   // first and second column = full width
+  grid-row: 1
+  display: flex
+  align-items: flex-end
+  padding: 0 0 1rem 1rem
+
+.expression-input
+  @include lg-text-size
+  font-family: 'Roboto Slab', serif
+  border: none
+  outline: none
+  flex-grow: 1
+  transition: color .3s $decelerate-easing
+  &-error
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+    color: #D84315
+    transition-timing-function: $accelerate-easing
+
+.functions
+  grid-column: 1 / 2 span
+  grid-row: 2
+
+  display: grid
+  grid-template-columns: repeat(5, 1fr)  // lets's define the inline grid of .functions
+  grid-template-rows: repeat(2, 1fr)
+
+
+.digits
+  grid-column: 1
+  grid-row: 3
+
+  display: grid
+  grid-template-columns: repeat(3, 1fr)  // lets's define the inline grid of .digits 
+  grid-template-rows: repeat(4, 1fr)
+
+  z-index: 2
+
+.operations
+  grid-column: 2
+  grid-row: 3
+
+  display: grid
+  grid-template-columns: repeat(2, 1fr)  // lets's define the inline grid of .operations 
+  grid-template-rows: repeat(4, 1fr)
+
+
+.button
+  position: relative
+  display: flex
+  box-shadow: 0 1px 6px 0 transparentize(#000, 1 - .16)
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  transition: all .1s $decelerate-easing
+  &:hover, :active
+    transition: all .1s $accelerate-easing
+
+.digit-button
+  @extend .button
+  background: #fff
+  color: $text-color
+  &:hover
+    background: lighten(#000, 97%)
+  &:active
+    background: transparentize(#000, 1 - .05)
+
+.digit, .dot
+  @include lg-text-size
+
+.ans
+  @include md-text-size
+  color: $primary-color
+
+.operation
+  @extend .digit-button
+  color: $primary-color
+
+.equal
+  @include lg-text-size
+  grid-column: 1 / 2 span
+
+.del, .ac
+  align-items: flex-end
+  justify-content: flex-end
+  padding: 1rem
+
+.shift
+  @include sm-text-size
+
+.function
+  display: block
+
+.semi-bold-button
+  @extend .button
+  background: $grey
+  color: $text-color
+  &:hover
+    background: lighten(#000, 92%)
+  &:active
+    background: transparentize(#000, 1 - .1)
+
+
+.bold-button
+  @extend .button
+  background: $primary-color
+  color: #fff
+  &:hover
+    background: darken($primary-color, 10%)
+  &:active
+    background: transparentize($primary-color, .15)
+
+
+.upper-text
+  @include sm-text-size
+  margin-top: -.6rem

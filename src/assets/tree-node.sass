@@ -1,0 +1,63 @@
+.tree-node
+  display: flex
+  flex-direction: column
+  align-items: center
+  &-root
+    position: relative
+    &-value
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .3)
+      width: $node-dim
+      height: $node-dim
+      z-index: 1
+      &-leaf
+        color: #545454
+        background: #fff
+        border: 1px solid #e7e7e7
+      &-inner
+        color: #fff
+        background: $primary-color
+    &-secondary-value
+      position: absolute
+      display: flex
+      right: -.8rem
+      top: -.8rem
+      min-width: 2rem
+      height: 2rem
+      font-size: .8rem
+      background-color: #fff
+      box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .3)
+      border-radius: 50%
+      align-items: center
+      justify-content: center
+      z-index: 2
+      transform: scale(0)
+      transition: transform .2s $accelerate-easing
+      &-activated
+        transform: scale(1)
+        transition: transform .2s $decelerate-easing
+  &-children
+    display: flex
+    flex-direction: row
+  &-child
+    flex: 1 1 auto
+    margin: 1.4rem .4rem
+    margin-bottom: 0
+.tree-edge
+  position: absolute
+  bottom: $node-dim / 2
+  &-to
+    &-left
+      right: $node-dim / 2
+    &-right
+      left: $node-dim / 2
+    &-center
+      right: $node-dim / 2
+      min-width: 2px
+  &-line
+    stroke: #545454
+    stroke-width: 1

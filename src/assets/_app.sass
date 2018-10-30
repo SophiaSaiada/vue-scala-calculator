@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab')
+
+@import 'reset'
+@import 'vars'
+@import 'mixins'
+@import 'animations'
+
+@import 'calculator'
+@import 'tree-node'
+  
+.app
+  display: flex
+  align-items: center
+  justify-content: center
+  min-height: 100vh
+  font-family: 'Roboto Slab', serif
+  padding: 1rem 0
+  box-sizing: border-box
+  
+  background-size: cover
+  background-position: center
+
+  &::before
+    content: ''
+    position: fixed
+    width: 100vw
+    height: 100vh
+    z-index: -1
+    background-image: url('https://images.pexels.com/photos/136419/pexels-photo-136419.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260')
+    opacity: 0
+    transition: opacity .5s $decelerate-easing
+    
+
+.app-calculator-mode
+  &::before
+    opacity: 1
+    transition: opacity .5s $accelerate-easing
+  
+.fade
+  &-enter-active
+    transition: opacity .5s $decelerate-easing, transform .3s $decelerate-easing
+  &-enter,
+  &-leave-active
+    opacity: 0
+    transform: translateY(1rem)
+
+.expression
+  @include lg-text-size
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-bottom: 2rem
+  background: #fff
+  color: $text-color
+  padding: 1rem
+  box-shadow: 0rem 0.2rem 1.2rem 0 rgba(0, 0, 0, .1), 0.2rem 0.5rem 1.2rem 0 rgba(0, 0, 0, .05), -0.2rem 0.5rem 1.2rem 0 rgba(0, 0, 0, .05)
+  border-radius: .25rem
+  &-as-string
+    flex: 1
+    text-align: center
+    padding: 0 1rem
+  &-result
+    color: $dark-grey
+
+.global-button
+  border: none
+  outline: none
+  cursor: pointer
+  background: $primary-color
+  transition: box-shadow .2s $decelerate-easing
+  &:hover
+    box-shadow: 0rem 0.2rem 1rem 0 rgba(0, 0, 0, .1), 0.2rem 0.4rem 1rem 0 rgba(0, 0, 0, .05), -0.2rem 0.4rem 1rem 0 rgba(0, 0, 0, .05)
+    transition-timing-function: $accelerate-easing
+  &:active
+    box-shadow: none
+    transition-timing-function: $decelerate-easing
+
+.evaluate-button
+  @include md-text-size
+  color: #fff
+  font-family: 'Roboto Slab', serif
+  padding: .5rem
+  border-radius: .2rem
+
+.back-button
+  position: fixed
+  background-image: url('assets/baseline-arrow_back-24px.svg')
+  background-size: 1rem
+  background-position: center
+  background-repeat: no-repeat
+  left: 2rem
+  top: 2rem
+  height: 3rem
+  width: 3rem
+  border-radius: 50%
+
+::selection
+  background: transparentize(#000, .8)

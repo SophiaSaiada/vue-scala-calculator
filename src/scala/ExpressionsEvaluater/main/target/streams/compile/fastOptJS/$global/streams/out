@@ -1,0 +1,16 @@
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing C:\Projects\vue-calculator\src\scala\ExpressionsEvaluater\main\target\scala-2.12\main-fastopt.js[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 188000 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 309056 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mBasic Linking: 509976 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Batch mode: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Incremental part: 120536 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizing 4977 methods.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizer part: 578272 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: 709564 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 84271 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 8249 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: 93925 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Class tree cache stats: reused: 362 -- invalidated: 371[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Method tree cache stats: resued: 0 -- invalidated: 2051[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter (write output): 432063 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 19 -- trees read: 480[0m
