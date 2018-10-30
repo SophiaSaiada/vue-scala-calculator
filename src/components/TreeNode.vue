@@ -43,7 +43,7 @@
           v-text="roundedSecondaryValue"></div>
       </div>
       <div class="tree-node-children">
-        <TreeNode
+        <tree-node
           class="tree-node-child"
           v-for="(child, i) in children"
           :jsonData="child"
@@ -76,7 +76,7 @@ const TreeNodeProps = Vue.extend({
 });
 
 @Component({
-  components: { TreeNode },
+  name: 'tree-node',
 })
 export default class TreeNode extends TreeNodeProps {
   public value = '';

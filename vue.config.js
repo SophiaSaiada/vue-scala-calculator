@@ -1,3 +1,6 @@
 module.exports = {
-  lintOnSave: false
-}
+  lintOnSave: false,
+  baseUrl: "docs/",
+  outputDir: "docs",
+  runtimeCompiler: true,
+};
